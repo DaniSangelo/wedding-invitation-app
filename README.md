@@ -73,16 +73,35 @@ node src/index.js
     {
         "name": "Guest Name",
         "phone": "5511999999999",
-        "table": "1"
+        "table": null,
+        "guestsAtTable": [
+            "Additional Guest 1",
+            "Additional Guest 2"
+        ]
     }
 ]
 ```
 
 ## ⚠️ Notes
 
-- Phone number must include country code (e.g., 55 for Brazil)
+- Phone number must include area code (e.g., 11 for São Paulo)
+- The `table` field can be null if not assigned yet
+- `guestsAtTable` is an array of additional guests' names that will be seated at the same table
 - Image must be in PNG format
 - Wait 2 seconds between each send to prevent blocking
+
+## 📊 Example Table
+
+| Name on the invitation | Guest Name | Table | Phone | Is adult? |
+|------|-------|-------|----------------|--------|
+| John Doe and family | John Doe | 1 | 5511999999999 | Yes |
+| John Doe and family | Jane Doe | 1 | 5511999999999 | Yes |
+| John Doe and family | Enzo Doe | 1 | 5511999999999 | Yes |
+| John Doe and family | Valentina Doe |  | 5511999999999 | No |
+
+In my case, I extracted data from an Excel file provided by the website where my guests confirmed their presence at my wedding celebration. Note that "Name on the invitation" and "Phone" are the same for all people in the invitation (usually, people from the same family). <br>
+
+In my code (messageService.js), I make a distinction between "guests" and "guestsAtTable", where "guest" is the first name of the family member (in the example above, it would be "John Doe") and "guestsAtTable" would be the rest of them. I did this because I wanted to send a more "personal" message: "Querido xxxx"
 
 ## 📄 License
 
