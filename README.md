@@ -107,6 +107,14 @@ In my code (messageService.js), I make a distinction between "guests" and "guest
 
 This project is under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+## ⚠️ Important Disclaimer
+
+This application is intended for personal use only and is not meant for commercial or profit-making purposes. It was created specifically for sending wedding invitations to friends and family.
+
+Please note that the WhatsApp Web library used in this project (`whatsapp-web.js`) is not officially authorized by WhatsApp for commercial use. Using this library for commercial purposes may violate WhatsApp's terms of service and could result in account restrictions.
+
+This project is meant to be used responsibly and in accordance with WhatsApp's terms of service.
+
 ## 🙏 Acknowledgments
 
 - [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js) - WhatsApp interaction library
